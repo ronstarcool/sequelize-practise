@@ -6,6 +6,8 @@ block content
     each val in users
       li= val.firstName
       a(href="/user/" + val.id) id: #{val.id} firstName: #{firstName}
+      form(method="POST" action="/user/" + val.id + "?_method=DELETE")
+        button(type="submit") delete this record
   h1 post a user
 
   form(method="POST" action="/user")

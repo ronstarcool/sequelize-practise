@@ -38,7 +38,7 @@ const Project = sequelize.define('project', {
 
 User.hasOne(Project); 
 // in dit geval: source = User, target = Project
-// creates userId column on project
+// creates userId on project
 
 // sequelize.sync({ force: true }); // drop and create all tables
 
