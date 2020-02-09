@@ -1,0 +1,12 @@
+extends layout.pug
+
+block content
+  h1 user show page
+  p firstName: #{user.firstName}
+  p lastName: #{user.lastName}
+  p info: #{user.info}
+  p createAt: #{user.createdAt}
+  p updatedAt: #{user.updatedAt}
+
+  form(method="POST" action="/user/" + user.id + "/edit")
+    include userform.pug
